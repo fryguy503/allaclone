@@ -240,7 +240,7 @@
 		if ($IsDropped)
 		{
 			// npcs dropping this (Very Heavy Query)
-			$query="SELECT $tbnpctypes.id,$tbnpctypes.name,
+			$query="SELECT DISTINCT $tbnpctypes.id,$tbnpctypes.name,
 					$tbspawn2.zone,$tbzones.long_name,
 					$tbloottableentries.multiplier,$tbloottableentries.probability,$tblootdropentries.chance
 					FROM $tbnpctypes,$tbspawn2,$tbspawnentry,$tbloottableentries,$tblootdropentries,$tbzones
@@ -249,6 +249,7 @@
 					AND $tbnpctypes.loottable_id=$tbloottableentries.loottable_id
 					AND $tbloottableentries.lootdrop_id=$tblootdropentries.lootdrop_id
 					AND $tblootdropentries.item_id=$id
+					AND $tbloottableentries.loottable_id <> 0
 					AND $tbzones.short_name=$tbspawn2.zone";
 			if ($MerchantsDontDropStuff==TRUE)
 			{
@@ -366,11 +367,10 @@
 				{
 					print "</ul>\n";
 				}
-				print "<b><a href='zone.php?name=".$row["short_name"]."'>".$row["long_name"]."</a> at: </b>\n";
+				print "<b><a href='zone.php?name=".$row["short_name"]."'>".$row["long_name"];
 				print "<ul>\n";
 				$CurrentZone = $row["short_name"];
 			}
-			print "<li>".$row["max_y"]." (Y), ".$row["max_x"]." (X), ".$row["max_z"]." (Z)</a></li>";
 		}
 		print "</ul>\n";
 		print "</td>\n";

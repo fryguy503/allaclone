@@ -32,7 +32,6 @@ include('../includes/functions.php');
 <li><a href=../zone.php?name=timorous>Timorous Deep</a>
 <li><a href=../zone.php?name=trakanon>Trakanon's Teeth</a>
 <li><a href=../zone.php?name=veeshan>Veeshan's Peak</a>
-<li><a href=../zone.php?name=veksar>Veksar</a>
 <li><a href=../zone.php?name=warslikswood>Warsliks Woods</a>
 <?
 include('../includes/footers.php');

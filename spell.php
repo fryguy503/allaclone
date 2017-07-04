@@ -59,6 +59,7 @@
 	else { print "Unknown target (".$spell["targettype"].")"; }
 	print "</td></tr>";
 	print "<tr><td nowrap><b>Resist : </b></td><td>".$dbspellresists[$spell["resist"]]." (adjust: ".$spell["ResistDiff"].")</td></tr>";
+	print "<tr><td nowrap><b>Difficulty Adj : </b></td><td>".$spell["basediff"]."</td></tr>";
 	if ($spell["TimeOfDay"]==2) { print "<tr><td nowrap><b>Casting restriction : </b></td><td>Nighttime</td></tr>"; }
 	$duration=CalcBuffDuration($minlvl,$spell["buffdurationformula"],$spell["buffduration"]);
 	print "<tr><td nowrap><b>Duration : </b></td><td>";

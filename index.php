@@ -25,7 +25,7 @@
 
 	
 
-	$Title="Wecome to AllaClone!";
+	$Title="Welcome to P2002 Allaclone";
 	include($includes_dir.'headers.php');
 
 	// Here's the main page of the website

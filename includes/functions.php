@@ -906,7 +906,7 @@ function BuildItemStats($item, $show_name_icon) {
 	$v = "";
 	if($item["itemtype"] == 54)  { $html_string .= "$v AUGMENTATION"; $v = " "; }
 	if($item["magic"] == 1)      { $html_string .= "$v MAGIC ITEM";   $v = " "; }
-	if($item["loreflag"] == 1)   { $html_string .= "$v LORE ITEM";    $v = " "; }
+	if($item["loregroup"] == -1)   { $html_string .= "$v LORE ITEM";    $v = " "; }
 	if($item["nodrop"] == 0)     { $html_string .= "$v NODROP";       $v = " "; }
 	if($item["norent"] == 0)     { $html_string .= "$v NORENT";       $v = " "; }
 	$html_string .= "                            </td>";
